@@ -1,0 +1,17 @@
+
+# Site details
+lang: en-GB
+host: mysite.com
+email: info@mysite.com
+
+# Jekyll config
+exclude:
+  - CNAME
+  - Makefile
+  - README.md
+future: false
+lsi: false
+permalink: /posts/:title/
+pygments: true
+safe: true
+timezone: Europe/London

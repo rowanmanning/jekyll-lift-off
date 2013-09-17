@@ -1,0 +1,44 @@
+---
+layout: nil
+noindex: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Pages -->
+    {% for page in site.pages %}
+        {% if page.url != '' and page.noindex != true %}
+            <url>
+                <loc>http://{{ site.host }}{{ page.url | replace: 'index.html', '' }}</loc>
+                <lastmod>
+                    {% if page.lastmod %}
+                        {{ page.lastmod | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% elsif page.date %}
+                        {{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% else %}
+                        {{ site.time | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% endif %}
+                </lastmod>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Posts -->
+    {% for post in site.posts %}
+        {% if post.url != '' and post.noindex != true %}
+            <url>
+                <loc>http://{{ site.host }}{{ post.url | replace: 'index.html', '' }}</loc>
+                <lastmod>
+                    {% if post.lastmod %}
+                        {{ post.lastmod | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% elsif post.date %}
+                        {{ post.date | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% else %}
+                        {{ site.time | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                    {% endif %}
+                </lastmod>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+</urlset>

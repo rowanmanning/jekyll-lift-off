@@ -1,0 +1,37 @@
+---
+layout: nil
+noindex: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Blog Title</title>
+    <link href="http://{{site.host}}{{page.url}}" rel="self"/>
+    <link href="http://{{site.host}}/"/>
+    <updated>{{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}</updated>
+    <id>http://{{site.host}}{{page.url}}</id>
+    <author>
+        <name>My Name</name>
+        <uri>http://{{site.host}}/</uri>
+    </author>
+
+    {% for post in site.posts %}
+        {% if post.noindex != true %}
+            <entry>
+                <title>{{post.title}}</title>
+                <link href="http://{{site.host}}{{post.url}}"/>
+                <published>{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}</published>
+                <updated>
+                    {% if post.lastmod %}
+                        {{post.lastmod | date: '%Y-%m-%dT%H:%M:%SZ'}}
+                    {% else %}
+                        {{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}
+                    {% endif %}
+                </updated>
+                <id>http://{{site.host}}{{post.url}}</id>
+                <content type="html">{{post.content | xml_escape}}</content>
+            </entry>
+        {% endif %}
+    {% endfor %}
+
+</feed>

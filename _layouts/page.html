@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{site.lang}}">
+<head>
+    
+    <!-- Page meta-information -->
+    <meta charset="utf-8"/>
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}"/>
+    {% if page.noindex %}
+        <meta name="robots" content="noindex"/>
+    {% endif %}
+
+    <!-- Site links -->
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml" title="My Blog"/>
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap"/>
+    <link rel="canonical" href="http://{{site.host}}{{page.url | replace: 'index.html', ''}}"/>
+    {% if page.url != '/index.html': %}
+        <link rel="author" href="http://{{site.host}}/"/>
+    {% endif %}
+
+</head>
+<body>
+
+    <div>
+        <a href="/">My Site</a>
+    </div>
+
+    {{content}}
+
+</body>
+</html>
