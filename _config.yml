@@ -2,7 +2,15 @@
 # Site details
 lang: en
 host: mysite.com
-email: info@mysite.com
+
+# Author Details
+author:
+  name: My Name
+  email: info@mysite.com
+
+# Blog Details
+blog:
+  name: My Blog
 
 # Jekyll config
 exclude:

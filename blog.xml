@@ -5,13 +5,13 @@ noindex: true
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>Blog Title</title>
+    <title>{{site.blog.name}}</title>
     <link href="http://{{site.host}}{{page.url}}" rel="self"/>
     <link href="http://{{site.host}}/"/>
     <updated>{{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}</updated>
     <id>http://{{site.host}}{{page.url}}</id>
     <author>
-        <name>My Name</name>
+        <name>{{site.author.name}}</name>
         <uri>http://{{site.host}}/</uri>
     </author>
 
