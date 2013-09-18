@@ -35,7 +35,7 @@ Jekyll Lift-Off exposes a few [extra configurations](_config.yml) which reduce t
 Front-Matter
 ------------
 
-Jekyll Lift-Off exposes uses a few custom front-matter variables:
+Jekyll Lift-Off exposes a few custom front-matter variables:
 
 **lastmod:** The last modified date of a page or post. This is used to indicate when content was last updated in the sitemap and ATOM feed.
 
