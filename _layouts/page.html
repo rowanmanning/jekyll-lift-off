@@ -15,7 +15,11 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap"/>
     <link rel="canonical" href="http://{{site.host}}{{page.url | replace: 'index.html', ''}}"/>
     {% if page.url != '/index.html': %}
-        <link rel="author" href="http://{{site.host}}/"/>
+        {% if page.author %}
+            <link rel="author" href="{{page.author.url}}" title="{{{page.author.name}}"/>
+        {% else %}
+            <link rel="author" href="{{site.author.url}}" title="{{site.author.name}}"/>
+        {% endif %}
     {% endif %}
 
 </head>

@@ -11,6 +11,9 @@
                 <time itemprop="dateCreated" datetime="{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
                     {{post.date | date: '%d %B %Y'}}
                 </time>
+                {% if post.author %}
+                    by {{post.author.name}}
+                {% endif %}
                 {% unless post.categories == empty %}
                     in
                     {% for category in post.categories %}

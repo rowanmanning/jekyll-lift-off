@@ -10,10 +10,6 @@ noindex: true
     <link href="http://{{site.host}}/"/>
     <updated>{{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}</updated>
     <id>http://{{site.host}}{{page.url}}</id>
-    <author>
-        <name>{{site.author.name | xml_escape}}</name>
-        <uri>http://{{site.host}}/</uri>
-    </author>
 
     {% for post in site.posts %}
         {% if post.noindex != true %}
@@ -29,6 +25,15 @@ noindex: true
                     {% endif %}
                 </updated>
                 <id>http://{{site.host}}{{post.url}}</id>
+                <author>
+                    {% if post.author %}
+                        <name>{{post.author.name | xml_escape}}</name>
+                        <uri>{{post.author.url}}</uri>
+                    {% else %}
+                        <name>{{site.author.name | xml_escape}}</name>
+                        <uri>{{site.author.url}}</uri>
+                    {% endif %}
+                </author>
                 <content type="html">{{post.content | xml_escape}}</content>
                 {% for category in post.categories %}
                     <category term="{{category}}"/>

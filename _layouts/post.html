@@ -9,6 +9,11 @@ layout: page
     <time itemprop="dateCreated" datetime="{{page.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
         {{page.date | date: '%d %B %Y'}}
     </time>
+    {% if page.author %}
+        by <a href="{{page.author.url}}">{{page.author.name}}</a>
+    {% else %}
+        by <a href="{{site.author.url}}">{{site.author.name}}</a>
+    {% endif %}
     {% unless page.categories == empty %}
         in
         {% for category in page.categories %}

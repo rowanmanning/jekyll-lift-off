@@ -13,6 +13,7 @@ What's In The Box?
 - Seperate layout for posts
 - Generated sitemap
 - ATOM feed
+- Authorship markup and multiple authors
 - Unindexed pages
 
 
@@ -25,7 +26,9 @@ Jekyll Lift-Off exposes a few [extra configurations](_config.yml) which reduce t
 
 **host:** Your site's host name. This should be set to your primary domain, with no scheme or trailing slash.
 
-**author.name:** The name of the author of posts on the site. That's normally you.
+**author.name:** The name of the default author of posts on the site. That's normally you.
+
+**author.url:** The web address of the default author of posts on the site.
 
 **blog.name:** The name of your blog. This is used in the ATOM feed.
 
@@ -34,6 +37,10 @@ Front-Matter
 ------------
 
 Jekyll Lift-Off exposes a few custom front-matter variables:
+
+**author.name:** The name of the author of the post. If not set, the site's default author name will be used.
+
+**author.url:** The web address of the author of the post. If not set, the site's default author URL will be used.
 
 **lastmod:** The last modified date of a page or post. This is used to indicate when content was last updated in the sitemap and ATOM feed.
 

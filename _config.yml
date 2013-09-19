@@ -5,11 +5,12 @@ host: yoursite.com
 
 # Author Details
 author:
-  name: <YOUR NAME>
+  name: YOUR NAME
+  url: YOUR WEBSITE
 
 # Blog Details
 blog:
-  name: <BLOG TITLE>
+  name: BLOG TITLE
 
 # Jekyll config
 exclude:
