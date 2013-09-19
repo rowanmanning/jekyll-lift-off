@@ -48,8 +48,9 @@ Build Script
 Jekyll Lift-Off exposes a couple of build scripts:
 
 ```sh
-$ make build  # Build the site (output to the _site directory)
-$ make watch  # Watch the site for changes, and build
+$ make build      # Build the site (output to the _site directory)
+$ make watch      # Watch the site for changes, and build
+$ make build-pub  # Build the site without draft posts included
 ```
 
 
