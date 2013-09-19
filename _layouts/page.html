@@ -25,20 +25,22 @@
 </head>
 <body>
 
-    <div>
+    <div role="banner">
         <a href="/">{{site.host}}</a>
-        <ul>
+        <ul role="navigation">
             <li><a href="/">Home</a></li>
             <li><a href="/blog.xml">Blog Feed</a></li>
             <li><a href="https://twitter.com/{{site.author.twitter}}">Twitter</a></li>
         </ul>
     </div>
 
-    {{content}}
+    <div role="main">
+        {{content}}
+    </div>
 
     <hr/>
 
-    <div>
+    <div role="contentinfo">
         <small>
             Copyright &copy; {{site.time | date: '%Y'}},
             {{site.author.name | xml_escape}}.
