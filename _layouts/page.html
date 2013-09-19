@@ -27,12 +27,18 @@
 
     <div>
         <a href="/">{{site.host}}</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog.xml">Blog Feed</a></li>
+            <li><a href="https://twitter.com/{{site.author.twitter}}">Twitter</a></li>
+        </ul>
     </div>
 
     {{content}}
 
+    <hr/>
+
     <div>
-        <hr/>
         <small>
             Copyright &copy; {{site.time | date: '%Y'}},
             {{site.author.name | xml_escape}}.

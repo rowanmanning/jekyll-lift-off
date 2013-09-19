@@ -30,6 +30,8 @@ Jekyll Lift-Off exposes a few [extra configurations](_config.yml) which reduce t
 
 **author.url:** The web address of the default author of posts on the site.
 
+**author.twitter:** The twitter handle of the default author.
+
 **blog.name:** The name of your blog. This is used in the ATOM feed.
 
 
