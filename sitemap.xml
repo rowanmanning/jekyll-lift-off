@@ -9,14 +9,14 @@ noindex: true
     {% for page in site.pages %}
         {% if page.url != '' and page.noindex != true %}
             <url>
-                <loc>http://{{ site.host }}{{ page.url | replace: 'index.html', '' }}</loc>
+                <loc>http://{{site.host}}{{page.url | replace: 'index.html', ''}}</loc>
                 <lastmod>
                     {% if page.lastmod %}
-                        {{ page.lastmod | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{page.lastmod | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% elsif page.date %}
-                        {{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{page.date | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% else %}
-                        {{ site.time | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% endif %}
                 </lastmod>
             </url>
@@ -27,14 +27,14 @@ noindex: true
     {% for post in site.posts %}
         {% if post.url != '' and post.noindex != true %}
             <url>
-                <loc>http://{{ site.host }}{{ post.url | replace: 'index.html', '' }}</loc>
+                <loc>http://{{site.host}}{{post.url | replace: 'index.html', ''}}</loc>
                 <lastmod>
                     {% if post.lastmod %}
-                        {{ post.lastmod | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{post.lastmod | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% elsif post.date %}
-                        {{ post.date | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% else %}
-                        {{ site.time | date: '%Y-%m-%dT%H:%M:%SZ' }}
+                        {{site.time | date: '%Y-%m-%dT%H:%M:%SZ'}}
                     {% endif %}
                 </lastmod>
             </url>
