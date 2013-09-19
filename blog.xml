@@ -30,6 +30,9 @@ noindex: true
                 </updated>
                 <id>http://{{site.host}}{{post.url}}</id>
                 <content type="html">{{post.content | xml_escape}}</content>
+                {% for category in post.categories %}
+                    <category term="{{category}}"/>
+                {% endfor %}
             </entry>
         {% endif %}
     {% endfor %}
