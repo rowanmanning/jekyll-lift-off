@@ -3,28 +3,39 @@
 <ol>
     {% for post in site.posts %}
         <li>
+
             <h2>
                 <a href="{{post.url}}">{{post.title}}</a>
             </h2>
+
             <div>
+
+                <!-- Post date -->
                 Posted
                 <time itemprop="dateCreated" datetime="{{post.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
                     {{post.date | date: '%d %B %Y'}}
                 </time>
+
                 {% if post.author %}
+                    <!-- Post author -->
                     by {{post.author.name}}
                 {% endif %}
+
                 {% unless post.categories == empty %}
+                    <!-- Post categories -->
                     in
                     {% for category in post.categories %}
                         <span>{{category}}</span>{% unless forloop.last %},{% endunless %}
                     {% endfor %}
                 {% endunless %}
+
             </div>
+
             <p>
                 {{post.description}}
                 <a href="{{post.url}}">Read more</a>.
             </p>
+
         </li>
     {% endfor %}
 </ol>

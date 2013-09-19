@@ -5,21 +5,28 @@ layout: page
 <h1>{{page.title}}</h1>
 
 <div>
+
+    <!-- Post date -->
     Posted
     <time itemprop="dateCreated" datetime="{{page.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">
         {{page.date | date: '%d %B %Y'}}
     </time>
+
+    <!-- Post author -->
     {% if page.author %}
         by <a href="{{page.author.url}}">{{page.author.name}}</a>
     {% else %}
         by <a href="{{site.author.url}}">{{site.author.name}}</a>
     {% endif %}
+
     {% unless page.categories == empty %}
+        <!-- Post categories -->
         in
         {% for category in page.categories %}
             <span>{{category}}</span>{% unless forloop.last %},{% endunless %}
         {% endfor %}
     {% endunless %}
+
 </div>
 
 {{content}}
