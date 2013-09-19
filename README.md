@@ -27,8 +27,6 @@ Jekyll Lift-Off exposes a few [extra configurations](_config.yml) which reduce t
 
 **author.name:** The name of the author of posts on the site. That's normally you.
 
-**author.email:** The author's email address. This will be publicly visible, as it's used for blog post feedback.
-
 **blog.name:** The name of your blog. This is used in the ATOM feed.
 
 
