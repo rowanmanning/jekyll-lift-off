@@ -1,16 +1,16 @@
 
 # Site details
 lang: en
-host: mysite.com
+host: yoursite.com
 
 # Author Details
 author:
-  name: My Name
-  email: info@mysite.com
+  name: <YOUR NAME>
+  email: info@yoursite.com
 
 # Blog Details
 blog:
-  name: My Blog
+  name: <BLOG TITLE>
 
 # Jekyll config
 exclude:

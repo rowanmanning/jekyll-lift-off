@@ -22,7 +22,7 @@
 <body>
 
     <div>
-        <a href="/">My Site</a>
+        <a href="/">{{site.host}}</a>
     </div>
 
     {{content}}
@@ -30,7 +30,8 @@
     <div>
         <hr/>
         <small>
-            Copyright &copy; {{site.time | date: '%Y'}}, {{site.author.name}}.
+            Copyright &copy; {{site.time | date: '%Y'}},
+            {{site.author.name | xml_escape}}.
         </small>
     </div>
 
