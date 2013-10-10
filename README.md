@@ -7,6 +7,12 @@ Jekyll Lift-Off is a simple boilerplate to get you started with a Jekyll-based s
 **Current Version:** *1.1.0*
 
 
+Setup
+-----
+
+To get started with Jekyll Lift-Off, you'll need to have Jekyll installed locally. Follow the instructions on the [Jekyll website][jekyll] to get set up.
+
+
 What's In The Box?
 ------------------
 
