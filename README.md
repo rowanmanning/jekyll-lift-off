@@ -50,6 +50,8 @@ Jekyll Lift-Off exposes a few custom front-matter variables:
 
 **author.url:** The web address of the author of the post. If not set, the site's default author URL will be used.
 
+**cta:** The call-to-action to use when displaying the post as part of a list. This defaults to "Read more" but you should change it to something more descriptive, e.g. "Learn about X" or "Read about my thoughts on X".
+
 **lastmod:** The last modified date of a page or post. This is used to indicate when content was last updated in the sitemap and ATOM feed.
 
 **noindex:** Boolean indicating whether a page or post should be indexed. If false, the page will contain a "robots: noindex" meta tag and will not appear in the sitemap or ATOM feed.

@@ -33,7 +33,7 @@
 
             <p>
                 {{post.description}}
-                <a href="{{post.url}}">Read more</a>.
+                <a href="{{post.url}}">{% if post.cta %}{{post.cta}}{% else %}Read more{% endif %}</a>.
             </p>
 
         </li>
