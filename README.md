@@ -4,6 +4,8 @@ Jekyll Lift-Off
 
 Jekyll Lift-Off is a simple boilerplate to get you started with a Jekyll-based site. It's still a good idea to catch up on the [Jekyll documentation][jekyll] to learn the ropes.
 
+**:bangbang: NOTE: This project is no longer being maintained. If you're interested in taking over maintenance of this repo, please contact me.**
+
 **Current Version:** *1.2.0*
 
 
